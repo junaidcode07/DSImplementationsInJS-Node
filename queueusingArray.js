@@ -2,11 +2,11 @@ class Queue {
     constructor(c) {
         this.front = this.rear = 0
         this.capacity = c
-        this.queue = new Array(c)
+        this.queue = [new Array(c)]
     }
 
     enque(data) {
-        if (this.capacity == this.rear) {
+        if (this.capacity === this.rear) {
             console.log("the Queue is full")
             return
         }
@@ -18,7 +18,7 @@ class Queue {
     }
 
     dequeue() {
-        if (this.front == this.rear) {
+        if (this.front === this.rear) {
             console.log("The queue is empty")
             return
         }
